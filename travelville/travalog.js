@@ -54,21 +54,15 @@ function signupValidate()
   }else if(!(p.test(p1)) ||  p1.length<6){
     alert("password is invalid..Re-enter please....Password must contain atleast 1.special character 2.Number");
   }else{
+    localStorage.setItem('', sn);
+   localStorage.setItem('pw', sem);
     window.location.href="login.html"
   }
   localStorage.setItem('email', email.value);
   localStorage.setItem('pass1', pass1.value);
-
-  var loginmail=document.getElementById("logmail").value;
-  var loginpass=document.getElementById("logpass").value;
-
-  var storedEmail=localStorage.getItem('email');
-  var storedPass=localStorage.getItem('pass1');
-  if((loginmail==storedEmail) && (loginpass==storedPass)){
-
   }
 
-}
+
 filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
 var x, i;
